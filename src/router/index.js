@@ -22,10 +22,17 @@ const routes = [
     component: () => import(/* webpackChunkName: "Jobs" */ '../views/jobs/Jobs.vue'),
   },
   {
-    path: '/jobs/:id',
+    path: '/jobs/:id?',
     name: 'JobDetails',
     component: () => import(/* webpackChunkName: "JobDetails" */ '../views/jobs/JobDetails.vue'),
     props: true,
+  },
+  {
+    path: '/all-jobs/:id',
+    name: 'AllJobDetails',
+    component: () => import(/* webpackChunkName: "AllJobs" */ '../views/jobs/AllJobs.vue'),
+    props: true,
+    // redirect: '/jobs/:id',
   },
 ]
 
